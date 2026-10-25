@@ -1,22 +1,22 @@
 let pantalla = document.getElementById("pantalla");
 
-let numeroAnterior = ""; 
-function agregarNumero(numero) {
-    if (pantalla.innerHTML === "0") {
-        pantalla.innerHTML = numero;
+function agregarCaracter(caracter) {
+    if (pantalla.innerHTML === "0" && caracter !== "+" && caracter !== ")") {
+        pantalla.innerHTML = caracter;
     } else {
-        pantalla.innerHTML = pantalla.innerHTML + numero;
+        pantalla.innerHTML = pantalla.innerHTML + caracter;
     }
 }
-function prepararSuma() {
-    numeroAnterior = pantalla.innerHTML; 
-    pantalla.innerHTML = "0"; 
+
+function limpiarPantalla() {
+    pantalla.innerHTML = "0";
 }
 
 function calcularResultado() {
-    let numeroActual = pantalla.innerHTML;
-    
-    let resultado = parseFloat(numeroAnterior) + parseFloat(numeroActual);
-
-    pantalla.innerHTML = resultado;
+    try {
+        let resultado = eval(pantalla.innerHTML);
+        pantalla.innerHTML = resultado;
+    } catch (error) {
+        pantalla.innerHTML = "Error";
+    }
 }

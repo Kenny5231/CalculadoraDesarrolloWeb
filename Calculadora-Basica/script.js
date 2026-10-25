@@ -20,3 +20,10 @@ function calcularResultado() {
         pantalla.innerHTML = "Error";
     }
 }
+
+function dividir(numero1, numero2) {
+    if (numero2 === 0) {
+        return "SYNTAX ERROR";
+    }
+    return numero1 / numero2;
+}

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora - Interfaz Básica</title>
+    <title>Calculadora - Suma</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,7 +24,10 @@
             <button class="numero" onclick="agregarNumero('2')">2</button>
             <button class="numero" onclick="agregarNumero('3')">3</button>
             
-            <button class="numero cero" onclick="agregarNumero('0')">0</button>
+            <button class="numero" onclick="agregarNumero('0')">0</button>
+            
+            <button class="numero" onclick="prepararSuma()">+</button>
+            <button class="numero" onclick="calcularResultado()">=</button>
         </div>
     </div>
 

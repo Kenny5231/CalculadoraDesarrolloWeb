@@ -55,6 +55,10 @@ function restar(numero1, numero2) {
     return numero1 - numero2;
 }
 
+function multiplicar(numero1, numero2) {
+    return numero1 * numero2;
+}
+
 function mostrarOperacion() {
     operacion.textContent = pantalla.textContent.replace(/\//g, "÷");
 }

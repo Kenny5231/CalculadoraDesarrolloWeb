@@ -6,15 +6,24 @@ function agregarCaracter(caracter) {
     } else {
         pantalla.innerHTML = pantalla.innerHTML + caracter;
     }
+    mostrarOperacion();
 }
 
 function limpiarPantalla() {
     pantalla.innerHTML = "0";
+    operacion.textContent = "";
 }
 
 function calcularResultado() {
     try {
+        mostrarOperacion();
         let resultado = eval(pantalla.innerHTML);
+
+        if (!Number.isFinite(resultado)) {
+            pantalla.innerHTML = "Error";
+            return;
+        }
+
         pantalla.innerHTML = resultado;
     } catch (error) {
         pantalla.innerHTML = "Error";
@@ -26,4 +35,10 @@ function dividir(numero1, numero2) {
         return "SYNTAX ERROR";
     }
     return numero1 / numero2;
+}
+
+let operacion = document.getElementById("operacion");
+
+function mostrarOperacion() {
+    operacion.textContent = pantalla.textContent.replace(/\//g, "÷");
 }

@@ -9,6 +9,7 @@
 <body>
 
     <div class="calculadora">
+        <div id="operacion" class="operacion"></div>
         <div id="pantalla" class="pantalla">0</div>
         
         <div class="teclado">
@@ -30,6 +31,7 @@
             
             <button class="numero" onclick="agregarCaracter('0')">0</button>
             <button class="numero operador" onclick="agregarCaracter('+')">+</button>
+            <button class="numero operador" onclick="agregarCaracter('/')">÷</button>
             <button class="numero operador" onclick="calcularResultado()">=</button>
         </div>
     </div>

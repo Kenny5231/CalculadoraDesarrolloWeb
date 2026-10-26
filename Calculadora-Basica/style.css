@@ -86,3 +86,12 @@ body {
 }
 .especial:hover { background-color: #c0392b; }
 .especial:active { background-color: #a93226; }
+
+.operacion {
+    color: #ffffff;
+    font-size: 1rem;
+    text-align: right;
+    margin-bottom: 8px;
+    min-height: 20px;
+    overflow-wrap: anywhere;
+}

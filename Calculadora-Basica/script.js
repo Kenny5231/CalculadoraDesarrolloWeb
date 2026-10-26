@@ -60,5 +60,5 @@ function multiplicar(numero1, numero2) {
 }
 
 function mostrarOperacion() {
-    operacion.textContent = pantalla.textContent.replace(/\//g, "÷");
+    operacion.textContent = pantalla.textContent.replace(/\//g, "÷").replace(/\*/g, "×");
 }
